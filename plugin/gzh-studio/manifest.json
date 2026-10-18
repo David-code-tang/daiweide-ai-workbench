@@ -1,0 +1,9 @@
+{
+  "id": "gzh-studio",
+  "name": "戴卫得AI工作台",
+  "version": "0.2.0",
+  "minAppVersion": "1.5.0",
+  "description": "微信公众号、X 发帖台、信息流、Skill 收集，直接调用本机的 Claude Code 和 Codex（订阅登录，不用 API key）。",
+  "author": "David",
+  "isDesktopOnly": true
+}

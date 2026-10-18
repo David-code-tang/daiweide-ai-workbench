@@ -1,0 +1,71 @@
+{
+  "manifest_version": 3,
+  "name": "戴卫得 X 创作助手",
+  "version": "2.2.0",
+  "description": "在 X 上显示粉丝数，评论灵感、引用观点、存为素材、整理原创；把工作台写好的公众号稿存进公众号草稿箱。",
+  "permissions": [
+    "storage",
+    "alarms"
+  ],
+  "host_permissions": [
+    "http://127.0.0.1:51888/*",
+    "https://x.com/*",
+    "https://twitter.com/*",
+    "https://mp.weixin.qq.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://x.com/*",
+        "https://twitter.com/*",
+        "https://mobile.x.com/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_start"
+    },
+    {
+      "matches": [
+        "https://mp.weixin.qq.com/*"
+      ],
+      "js": [
+        "wx.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "inject.js",
+        "avatar.png"
+      ],
+      "matches": [
+        "https://x.com/*",
+        "https://twitter.com/*",
+        "https://mobile.x.com/*"
+      ]
+    }
+  ],
+  "action": {
+    "default_title": "戴卫得 X 创作助手",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon16.png",
+      "32": "icon32.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    }
+  },
+  "options_page": "options.html",
+  "icons": {
+    "16": "icon16.png",
+    "32": "icon32.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+}

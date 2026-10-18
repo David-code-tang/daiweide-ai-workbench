@@ -1,0 +1,7 @@
+node_modules/
+bin/
+cw-data/
+cw-review/
+.DS_Store
+__pycache__/
+.venv/

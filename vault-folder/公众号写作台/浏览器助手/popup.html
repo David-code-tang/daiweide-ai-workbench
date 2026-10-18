@@ -1,0 +1,25 @@
+<!doctype html><html lang="zh"><head><meta charset="utf-8"><title>戴卫得 X 创作助手</title>
+<style>
+:root{--fg:#14211b;--mut:#7d8a84;--line:#e7ece9;--soft:#f4f7f5;--ac:#1f6f4a;--mint:#d7f3e3;--mint2:#c3ecd5}
+*{box-sizing:border-box}
+body{margin:0;width:320px;background:#fff;color:var(--fg);font:14px/1.5 -apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif}
+header{display:flex;align-items:center;gap:10px;padding:16px 16px 10px}header img{width:36px;height:36px;border-radius:11px;object-fit:cover}
+header b{display:block;font-size:15px}header small{display:block;font-size:10px;letter-spacing:1.5px;color:var(--mut);text-transform:uppercase}
+.b{padding:4px 16px 14px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}.stat{background:var(--soft);border-radius:12px;padding:9px 4px;text-align:center}.stat b{display:block;font-size:17px}.stat span{font-size:11px;color:var(--mut)}
+.msg{font-size:12px;color:var(--mut);margin:10px 0 0}.err{color:#d9534f}
+.row{display:flex;gap:6px;margin-top:12px}input{flex:1;min-width:0;border:1px solid var(--line);border-radius:10px;padding:8px 10px;font:inherit;outline:none}input:focus{border-color:var(--ac)}
+.sm{cursor:pointer;border:1px solid var(--line);background:#fff;border-radius:10px;padding:0 12px;font:inherit;font-size:13px}
+.go{cursor:pointer;border:none;width:100%;background:var(--mint);font:inherit;font-weight:700;border-radius:12px;padding:12px;margin-top:12px}.go:hover{background:var(--mint2)}
+footer{display:flex;justify-content:space-between;padding:10px 16px;border-top:1px solid var(--line);font-size:12px;color:var(--mut)}footer a{color:var(--mut);text-decoration:none}footer a:hover{color:var(--ac)}
+#model{color:var(--ac);font-weight:600}
+</style></head><body>
+<header><img src="avatar.png" alt=""><div><b>戴卫得 X 创作助手</b><small>Create with your own voice</small></div></header>
+<div class="b">
+<div class="stats"><div class="stat"><b id="p">–</b><span>今日已发</span></div><div class="stat"><b id="r">–</b><span>今日已评</span></div><div class="stat"><b id="f">–</b><span id="fs">粉丝</span></div></div>
+<div class="msg" id="msg">正在连接工作台…</div>
+<div class="row"><input id="cnt" type="number" min="0" placeholder="记录今天的粉丝数"><button class="sm" id="save">记录</button></div>
+<button class="go" id="orig">✦ 整理原创推文</button>
+</div>
+<footer><span id="model">● …</span><span><a href="#" id="opt">人设</a> · <a href="https://x.com/home" target="_blank">我的主页</a></span></footer>
+<script src="popup.js"></script></body></html>
